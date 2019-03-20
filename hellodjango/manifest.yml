@@ -6,9 +6,5 @@ applications:
   random-route: true
   buildpack: python_buildpack
   command: bash ./run.sh
-  declared-services:
-    hellodjango:
-      label: postgres
-      plan: shared-nr
-  services:
-    - hellodjango
+  env:
+   DISABLE_COLLECTSTATIC: 1
